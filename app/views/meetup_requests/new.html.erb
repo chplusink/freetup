@@ -1,0 +1,7 @@
+<h1>Freetups</h1>
+<h2>Find free Meetups based on location and coding language</h2>
+<form method="POST" action="/meetup_requests">
+  <input class="zipcode" type="text" name="zip" placeholder="Zip Code" maxlength="5">
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input class="submit" type="submit" name="submit">
+</form>
