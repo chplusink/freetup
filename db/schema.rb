@@ -10,11 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 1) do
+ActiveRecord::Schema.define(version: 2) do
 
   create_table "events", force: :cascade do |t|
     t.string "title"
     t.string "description"
+  end
+
+  create_table "meetup_requests", force: :cascade do |t|
+    t.string "zip"
+    t.string "location"
+    t.string "request"
   end
 
 end

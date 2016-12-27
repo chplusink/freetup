@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :events, only: [:index]
+  resources :meetup_requests, only: [:new]
+
+  post '/meetup_requests', to: "meetup_requests#new_meetup_request"
+
 end
