@@ -1,0 +1,45 @@
+// Place all the styles related to the meetup_api controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// Universal Styles (in /views/layouts/application.html.erb)
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.mainHeader {
+  h1 {
+    // Title ("Freetups")
+    text-align: center;
+
+    color: #ed1c40;
+    font-family: 'Leckerli One', cursive;
+  }
+
+  h2 {
+    // Subtitle ("")
+    margin: 0;
+    padding: 44px 24px 60px 24px;
+    text-align: center;
+
+    background: #ed1c40;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+  }
+}
+
+.pageHead {
+  // Black box, under subtitle
+  width: 460px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -24px;
+  padding: 12px;
+  background: black;
+  text-align: center;
+  color: white;
+}

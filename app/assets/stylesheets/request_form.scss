@@ -1,29 +1,14 @@
 // Place all the styles related to the meetup_api controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-h1 {
-  text-align: center;
 
-  color: #ed1c40;
-  font-family: 'Leckerli One', cursive;
-}
 
-h2 {
-  margin: 0;
-  padding: 5%;
-  text-align: center;
-
-  background: #ed1c40;
-  color: #fff;
-  font-family: 'Roboto', sans-serif;
-}
+// Meetup Form Styles
 
 form {
-  padding: 12px;
-  background: black;
-  color: white;
-
-  .zipcode, .submit {
+  select,
+  input[type='text'],
+  input[type='submit'] {
     padding: 12px;
     border: none;
     border-radius: 3px;
@@ -31,12 +16,21 @@ form {
     font-size: 18px;
   }
 
-  .zipcode {
+  select {
+    margin-right: 8px;
+    height: 44px;
+  }
+
+  option {
+    color: lightgray;
+  }
+
+  input[type='text'] {
     margin-right: 8px;
     color: lightgray;
   }
 
-  .submit {
+  input[type='submit'] {
     background: #ed1c40;
     color: white;
   }

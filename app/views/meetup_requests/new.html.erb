@@ -1,7 +1,24 @@
-<h1>Freetups</h1>
-<h2>Find free Meetups based on location and coding language</h2>
-<form method="POST" action="/meetup_requests">
-  <input class="zipcode" type="text" name="zip" placeholder="Zip Code" maxlength="5">
-<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <input class="submit" type="submit" name="submit">
-</form>
+<div class="pageHead">
+  <!-- <form method="POST" action=""> -->
+  <%= form_tag("/meetup_requests", method: "POST") do %>
+    <!-- <input type="text" name="zip" placeholder="Zip Code" maxlength="5"> -->
+    <%= select_tag(:topic,
+      options_for_select([
+        ['C, C++, C#','c'],
+        ['iOS','ios'],
+        ['Java','java'],
+        ['Javascript','javascript'],
+        ['PHP','php'],
+        ['Python','python'],
+        ['Ruby','ruby'],
+        ['SQL','sql'],
+      ]),
+      :include_blank => "Language"
+    ) %>
+    <%= text_field_tag(:zip, nil, maxlength: 5, placeholder: 'Zipcode') %>
+    <!-- <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"> -->
+    <%= submit_tag("Freetup!") %>
+    <!-- <input class="submit" type="submit" name="submit"> -->
+  <% end %>
+  <!-- </form> -->
+</div>

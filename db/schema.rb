@@ -13,8 +13,10 @@
 ActiveRecord::Schema.define(version: 2) do
 
   create_table "events", force: :cascade do |t|
-    t.string "title"
+    t.string "name"
     t.string "description"
+    t.string "fee"
+    t.string "link"
   end
 
   create_table "meetup_requests", force: :cascade do |t|
