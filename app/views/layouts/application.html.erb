@@ -6,14 +6,21 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link href="https://fonts.googleapis.com/css?family=Leckerli+One|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Leckerli+One|Roboto|Roboto:500" rel="stylesheet">
   </head>
 
   <body>
-    <div class="mainHeader">
-      <h1>Freetups</h1>
-      <h2>Find free Meetups based on location and coding language</h2>
+    <div id="wrapper">
+      <header>
+        <a href="<%= new_meetup_request_url %>"><h1>Freetups</h1></a>
+        <h2>Find free Meetups based on location and coding language</h2>
+      </header>
+      <div id="content">
+        <%= yield %>
+      </div>
+      <footer>
+        <a href="https://github.com/entcheva/freetup"><span>Check out the repo on GitHub!</span></a>
+      </footer>
     </div>
-    <%= yield %>
   </body>
 </html>

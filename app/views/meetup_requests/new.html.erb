@@ -1,7 +1,5 @@
 <div class="pageHead">
-  <!-- <form method="POST" action=""> -->
   <%= form_tag("/meetup_requests", method: "POST") do %>
-    <!-- <input type="text" name="zip" placeholder="Zip Code" maxlength="5"> -->
     <%= select_tag(:topic,
       options_for_select([
         ['C, C++, C#','c'],
@@ -16,9 +14,6 @@
       :include_blank => "Language"
     ) %>
     <%= text_field_tag(:zip, nil, maxlength: 5, placeholder: 'Zipcode') %>
-    <!-- <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"> -->
     <%= submit_tag("Freetup!") %>
-    <!-- <input class="submit" type="submit" name="submit"> -->
   <% end %>
-  <!-- </form> -->
 </div>
