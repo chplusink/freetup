@@ -4,13 +4,14 @@
 
 .eventsHeader {
   font-size: 34px;
+  font-weight: 600;
   height: 44px;
 }
 
 ul {
   margin: 2% 6% 0 6%;
   padding: 0;
-  border-top: 1px gray solid;
+  border-top: 1px #ddd solid;
   border-radius: 4px;
   background: white;
 }
@@ -22,7 +23,7 @@ li {
   justify-content: space-between;
   align-items: center;
   padding: 12px;
-  border: 1px gray solid;
+  border: 1px #ddd solid;
   border-top: none;
 
   .groupEvent {
