@@ -1,5 +1,5 @@
 class MeetupRequestsController < ApplicationController
-  attr_reader :zip
+  # attr_reader :zip
 
   LANGUAGE_URL = "https://api.meetup.com/find/topics"
   EVENTS_URL = "https://api.meetup.com/2/open_events"
@@ -26,7 +26,6 @@ class MeetupRequestsController < ApplicationController
     query = Q_PARAMS
     query[:topic] = get_language
     query[:zip] = params[:zip]
-    query[:category] = TECH_CATEGORY
     query
   end
 
@@ -46,7 +45,15 @@ class MeetupRequestsController < ApplicationController
   def free_events   # Returns an array of hashes with only free events, and only key/value pairs that we're using
     all = fetch_events
     free_events = all.select {|k,v| k['fee'] == nil || k['fee']['required'] == false}
-    free_events.each {|event| Event.create(name: event['name'], description: event['description'], link: event['event_url'])}
+    # binding.pry
+    free_events.each {|event| Event.create(
+      name: event['name'],
+      link: event['event_url'],
+      group: event['group']['name'].upcase,
+      group_slug: event['group']['urlname'],
+      date_time: DateTime.strptime((event['time']/1000).to_s, '%s').in_time_zone("Eastern Time (US & Canada)").strftime('%b %e, %Y %l:%M%p'),
+      description: event['description']
+    )}
   end
 
 end

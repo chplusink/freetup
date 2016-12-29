@@ -3,8 +3,10 @@ class CreateEvents < ActiveRecord::Migration[5.0]
     create_table :events do |t|
       t.string :name
       t.string :description
-      t.string :fee
       t.string :link
+      t.string :group
+      t.string :group_slug
+      t.string :date_time
     end
   end
 end

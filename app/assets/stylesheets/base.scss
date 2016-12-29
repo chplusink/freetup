@@ -6,16 +6,33 @@
 // Universal Styles (in /views/layouts/application.html.erb)
 
 body {
+  height: 100%;
   margin: 0;
   font-family: 'Roboto', sans-serif;
-
+  background: #fff4f8;
 }
 
-.mainHeader {
+a {
+  text-decoration: none;
+
+  &:visited {
+    text-decoration: none;
+  }
+}
+
+#wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
+header {
   h1 {
     // Title ("Freetups")
     text-align: center;
+    margin: 0;
+    padding: 22px 0 22px 0;
 
+    background: white;
     color: #ed1c40;
     font-family: 'Leckerli One', cursive;
   }
@@ -32,14 +49,32 @@ body {
   }
 }
 
-.pageHead {
-  // Black box, under subtitle
-  width: 460px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -24px;
-  padding: 12px;
-  background: black;
-  text-align: center;
-  color: white;
+#content {
+  padding-bottom: 88px;
+
+  .pageHead {
+    // Black box, under subtitle
+    width: 460px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -24px;
+    padding: 12px;
+    background: black;
+    border-radius: 4px;
+    text-align: center;
+    color: white;
+  }
+
+}
+
+footer {
+  // Footer (Link to Github)
+  position: absolute;
+  // bottom: 0;
+  height: 88px;
+  width: 100%;
+  // display: flex;
+  // align-content: space-around;
+  // align-items: center;
+  background: #ed1c40;
 }

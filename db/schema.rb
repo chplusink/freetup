@@ -15,14 +15,15 @@ ActiveRecord::Schema.define(version: 2) do
   create_table "events", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.string "fee"
     t.string "link"
+    t.string "group"
+    t.string "group_slug"
+    t.string "date_time"
   end
 
   create_table "meetup_requests", force: :cascade do |t|
     t.string "zip"
-    t.string "location"
-    t.string "request"
+    t.string "topic"
   end
 
 end
