@@ -1,5 +1,4 @@
 class MeetupRequestsController < ApplicationController
-  # attr_reader :zip
 
   LANGUAGE_URL = "https://api.meetup.com/find/topics"
   EVENTS_URL = "https://api.meetup.com/2/open_events"
@@ -44,8 +43,7 @@ class MeetupRequestsController < ApplicationController
 
   def free_events   # Returns an array of hashes with only free events, and only key/value pairs that we're using
     all = fetch_events
-    free_events = all.select {|k,v| k['fee'] == nil || k['fee']['required'] == false}
-    # binding.pry
+    free_events = all.select {|k,v| k['fee'] == nil || k['fee']['required'] == "0"}
     free_events.each {|event| Event.create(
       name: event['name'],
       link: event['event_url'],

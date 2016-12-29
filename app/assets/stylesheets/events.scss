@@ -3,58 +3,59 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .eventsHeader {
+  text-align: center;
   font-size: 34px;
   font-weight: 600;
   height: 44px;
 }
 
-ul {
-  margin: 2% 6% 0 6%;
+#eventsList {
+  margin: 8% 6% 6% 6%;
   padding: 0;
   border-top: 1px #ddd solid;
   border-radius: 4px;
   background: white;
-}
 
-li {
-  list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px;
-  border: 1px #ddd solid;
-  border-top: none;
-
-  .groupEvent {
-
-    .groupName {
-      margin: 0;
-      font-size: 16px;
-      font-weight: 500;
-      color: gray;
-    }
-
-    .eventName {
-      margin: 0;
-      font-size: 24px;
-      color: black;
-    }
-
-  }
-
-  .dateTime {
-    span {
-      color: gray;
-    }
-  }
-
-  .eventDescription {
+  li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
     padding: 12px;
-    background: #F0647C;
+    border: 1px #ddd solid;
+    border-top: none;
 
-    p {
-      padding-top: 0;
+    .groupEvent {
+
+      .groupName {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 500;
+        color: gray;
+      }
+
+      .eventName {
+        margin: 0;
+        font-size: 24px;
+        color: black;
+      }
+
+    }
+
+    .dateTime {
+      span {
+        color: gray;
+      }
+    }
+
+    .eventDescription {
+      padding: 12px;
+      background: #F0647C;
+
+      p {
+        padding-top: 0;
+      }
+
     }
 
   }
