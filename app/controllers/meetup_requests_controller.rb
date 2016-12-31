@@ -3,7 +3,6 @@ class MeetupRequestsController < ApplicationController
   LANGUAGE_URL = "https://api.meetup.com/find/topics"
   EVENTS_URL = "https://api.meetup.com/2/open_events"
   KEY = "636f679609123343506f6b68434319"
-  TECH_CATEGORY = "34"
   Q_PARAMS = {sign: true, key: KEY}
 
   # ACTIONS

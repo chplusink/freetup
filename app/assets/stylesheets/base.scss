@@ -14,15 +14,10 @@ body {
 
 a {
   text-decoration: none;
-  &:visited { text-decoration: none; }
+  &:visited { text-decoration: none }
 }
 
-li { list-style-type: none; }
-
-#wrapper {
-  min-height: 100%;
-  position: relative;
-}
+li { list-style-type: none }
 
 header {
   h1 {
@@ -40,13 +35,13 @@ header {
     // Subtitle ("")
     margin: 0;
     padding: 44px 24px 60px 24px;
-    text-align: center;
-
     background: #ed1c40;
+    text-align: center;
     color: #fff;
     font-family: 'Roboto', sans-serif;
   }
-}
+
+}  //end header
 
 #content {
 
@@ -56,23 +51,19 @@ header {
     top: 196px;
     left: 0;
     right: 0;
+    width: 440px;
     margin-left: auto;
     margin-right: auto;
-    width: 440px;
     padding: 12px;
     background: #0f1721;
     border-radius: 4px;
-    // text-align: center;
     color: white;
   }
 
-}
+}  //end #content
 
 footer {
   // Footer (Link to Github)
-  // position: absolute;
-  // bottom: 0;
-  // height: 88px;
   width: 100%;
   padding: 24px;
   display: flex;
@@ -82,29 +73,35 @@ footer {
   background: #ed1c40;
   color: white;
 
-  p {
-    margin: 8px;
-  }
-  a {
-    color: white;
-  }
+  p { margin: 8px }
+  a { color: white }
+
+}  //end footer
+
+// Tim Holman's Github Corner http://tholman.com/github-corners/)
+
+.github-corner svg {
+  fill:#151513;
+  color:#fff;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  border: 0;
+  right: 0;
 }
 
-.github-corner {
-  svg {
-    fill:#151513;
-    color:#fff;
-    position: absolute;
-    z-index: 10;
-    top: 0;
-    border: 0;
-    right: 0;
-  }
+.github-corner:hover .octo-arm { animation:octocat-wave 560ms ease-in-out }
+
+@keyframes octocat-wave {
+  0%,
+  100% { transform:rotate(0) }
+  20%,
+  60% { transform:rotate(-25deg) }
+  40%,
+  80% { transform:rotate(10deg) }
 }
 
-.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}
-@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}
-@media (max-width:500px){
-  .github-corner:hover .octo-arm{animation:none}
-  .github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}
+@media (max-width:500px) {
+  .github-corner:hover .octo-arm { animation:none }
+  .github-corner .octo-arm { animation:octocat-wave 560ms ease-in-out }
 }

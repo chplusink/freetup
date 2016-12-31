@@ -1,8 +1,3 @@
-// Place all the styles related to the meetup_api controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-
 // Meetup Form Styles
 
 form {
@@ -21,10 +16,6 @@ form {
     height: 44px;
   }
 
-  option {
-    color: lightgray;
-  }
-
   input[type='text'] {
     margin-right: 8px;
     color: black;
@@ -35,4 +26,6 @@ form {
     color: white;
   }
 
-}
+}  //end form
+
+.hero { display: block; }

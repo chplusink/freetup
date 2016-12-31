@@ -1,7 +1,3 @@
-// Place all the styles related to the events controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 .eventsHeader {
   text-align: center;
   font-size: 34px;
@@ -40,24 +36,18 @@
         color: black;
       }
 
-    }
+    }  //end .groupEvent
 
-    .dateTime {
-      span {
-        color: gray;
-      }
-    }
+    .dateTime { color: gray; }
 
     .eventDescription {
       padding: 12px;
       background: #F0647C;
 
-      p {
-        padding-top: 0;
-      }
+      p { padding-top: 0; }
 
-    }
+    }  //end .eventDescription
 
-  }
+  }  //end li
 
-}
+}  //end #eventList
